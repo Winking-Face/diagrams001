@@ -1,0 +1,20 @@
+version: winkingface/v1
+type: diagram
+
+meta:
+ name: mydiagram
+ workload: nlp
+
+nodes:
+ - name: "EC2"
+   type: EC2
+   id: 1
+   connections: [1-2]
+ - name: "docker"
+   type: Docker
+   id: 2
+   connections: [2-3]
+ - name: "ECR"
+   type: ECR
+   id: 3
+   connections: None
