@@ -6,15 +6,20 @@ meta:
  workload: nlp
 
 nodes:
- - name: "EC2"
-   type: EC2
-   id: 1
-   connections: [1-2]
- - name: "docker"
-   type: Docker
-   id: 2
-   connections: [2-3]
- - name: "ECR"
-   type: ECR
-   id: 3
-   connections: None
+ - id: 1
+   position: { x: 10, y: 10 }
+   type: "docker"
+ - id: 2
+   position: { x: 20, y: 20 }
+   type: "aws"
+ - id: 3
+   position: { x: 30, y: 30 }
+   type: "ec2"
+
+connections:
+ - id: "connection-1"
+   source: 1
+   target: 2
+ - id: "connection-2"
+   source: 2
+   target: 3
