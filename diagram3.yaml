@@ -8,13 +8,13 @@ meta:
 nodes:
  - id: 1
    position: { x: 10, y: 10 }
-   type: "docker"
+   type: "dockerNode"
  - id: 2
    position: { x: 20, y: 20 }
-   type: "aws"
+   type: "ec2Node"
  - id: 3
    position: { x: 30, y: 30 }
-   type: "ec2"
+   type: "customNode"
 
 connections:
  - id: "connection-1"
